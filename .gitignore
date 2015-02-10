@@ -1,3 +1,4 @@
 vendor
 /access.log
 /error.log
+ratchet.log
