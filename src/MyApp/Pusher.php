@@ -14,7 +14,7 @@ class Pusher implements WampServerInterface
     function __construct()
     {
         $this->logger = new FileLogger();
-        $this->logger->writeString('constr');
+        //$this->logger->writeString('constr');
     }
 
     /**
@@ -24,7 +24,7 @@ class Pusher implements WampServerInterface
 
     public function onSubscribe(ConnectionInterface $conn, $topic)
     {
-        $this->logger->writeString('onSubscribe call');
+        //$this->logger->writeString('onSubscribe call');
         $this->subscribedTopics[$topic->getId()] = $topic;
     }
 
