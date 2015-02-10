@@ -13,7 +13,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $server = IoServer::factory(
     new Chat(),
-    8080
+    8081,
+    'localhost'
 );
 
 $server->run();
