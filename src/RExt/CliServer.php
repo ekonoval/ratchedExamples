@@ -79,7 +79,7 @@ class CliServer
     protected function setupWebSocketServer()
     {
         $webSock = new React\Socket\Server($this->loop);
-        $webSock->listen($this->webSocketPort, $this->webSocketPort); // Binding to 0.0.0.0 means remotes can connect
+        $webSock->listen($this->webSocketPort, $this->webSocketHost); // Binding to 0.0.0.0 means remotes can connect
         $webServer = new Ratchet\Server\IoServer(
             new Ratchet\Http\HttpServer(
                 new Ratchet\WebSocket\WsServer(
