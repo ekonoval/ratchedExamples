@@ -5,7 +5,7 @@ use Ratchet\Wamp\Exception;
 use Ratchet\Wamp\WampServerInterface;
 use Ratchet\ConnectionInterface;
 
-class PusherAbstract implements WampServerInterface
+class PusherBase implements WampServerInterface
 {
     /**
      * A lookup of all the topics clients have subscribed to

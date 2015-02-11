@@ -1,7 +1,7 @@
 <?php
 namespace RExt;
 
-class PusherCustom extends PusherAbstract
+class PusherCustom extends PusherBase
 {
 //    /**
 //     * @param string JSON'ified string we'll receive from ZeroMQ

@@ -16,7 +16,7 @@ class CliServer
     protected $loop;
 
     /**
-     * @var PusherAbstract
+     * @var PusherBase
      */
     protected $pusher;
 
@@ -26,11 +26,11 @@ class CliServer
     protected $webSocketPort;
 
     /**
-     * @param PusherAbstract $pusher
+     * @param PusherBase $pusher
      * @param string $serverPoolAddress - like '127.0.0.1:5555' - Binding to 127.0.0.1 means the only client that can connect is itself
      * @param string $websocketAddress - '0.0.0.0:8080' - Binding to 0.0.0.0 means remotes can connect
      */
-    function __construct(PusherAbstract $pusher, $serverPoolAddress, $websocketAddress)
+    function __construct(PusherBase $pusher, $serverPoolAddress, $websocketAddress)
     {
         $this->loop = Factory::create();
         $this->pusher = $pusher;
